@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-polish-sage: #0f4c5c;
+  --color-polish-cream: #F8FAFC;
+  --color-polish-clay: #e36414;
+  --color-polish-gold: #fb8b24;
+  --color-polish-emergency: #b91c1c;
+  --color-polish-ink: #0f172a;
+
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --shadow-polish: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-emergency: 0 4px 12px rgba(185, 28, 28, 0.3);
+  --shadow-book: 0 4px 12px rgba(227, 100, 20, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-polish-cream text-polish-ink antialiased selection:bg-polish-clay selection:text-white;
+  }
+
+  /* Visible focus rings for keyboard navigation (WCAG 2.1) */
+  *:focus-visible {
+    outline: 3px solid var(--color-polish-clay);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Skip to main content link for keyboard/screen reader users */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 100;
+    padding: 12px 24px;
+    background: var(--color-polish-sage);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Card base styling */
+  .card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+}
+
+/* Respect prefers-reduced-motion (WCAG accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap');
+
