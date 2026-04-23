@@ -181,7 +181,7 @@ export default function App() {
         <motion.div 
           animate={{ y: [0, 10, 0] }} 
           transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 left-6 md:left-24 text-white/40 flex flex-col items-start gap-2"
+          className="hidden md:flex absolute bottom-10 left-6 md:left-24 text-white/40 flex-col items-start gap-2"
         >
           <span className="text-[10px] uppercase tracking-widest font-bold">Explore</span>
           <div className="w-px h-12 bg-white/20 relative">
@@ -219,18 +219,18 @@ export default function App() {
               <p className="text-gray-600 text-lg leading-relaxed font-light">
                 {ABOUT.story}
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 border-t border-gray-100 text-center sm:text-left">
+              <div className="grid grid-cols-3 gap-2 sm:gap-8 pt-8 border-t border-gray-100 text-center sm:text-left">
                 <div>
-                  <div className="text-3xl font-serif font-bold text-polish-clay">{ABOUT.stats[0].value}</div>
-                  <div className="text-[10px] uppercase font-bold tracking-widest text-gray-400 mt-2">{ABOUT.stats[0].label}</div>
+                  <div className="text-xl sm:text-3xl font-serif font-bold text-polish-clay">{ABOUT.stats[0].value}</div>
+                  <div className="text-[8px] sm:text-[10px] uppercase font-bold tracking-widest text-gray-400 mt-2">{ABOUT.stats[0].label}</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-serif font-bold text-polish-clay">{ABOUT.stats[1].value}</div>
-                  <div className="text-[10px] uppercase font-bold tracking-widest text-gray-400 mt-2">{ABOUT.stats[1].label}</div>
+                  <div className="text-xl sm:text-3xl font-serif font-bold text-polish-clay">{ABOUT.stats[1].value}</div>
+                  <div className="text-[8px] sm:text-[10px] uppercase font-bold tracking-widest text-gray-400 mt-2">{ABOUT.stats[1].label}</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-serif font-bold text-polish-clay">{ABOUT.stats[2].value}</div>
-                  <div className="text-[10px] uppercase font-bold tracking-widest text-gray-400 mt-2">{ABOUT.stats[2].label}</div>
+                  <div className="text-xl sm:text-3xl font-serif font-bold text-polish-clay">{ABOUT.stats[2].value}</div>
+                  <div className="text-[8px] sm:text-[10px] uppercase font-bold tracking-widest text-gray-400 mt-2">{ABOUT.stats[2].label}</div>
                 </div>
               </div>
             </div>
