@@ -131,7 +131,7 @@ export default function App() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_40%,rgba(197,160,89,0.3)_0%,transparent_50%)]"></div>
         </div>
 
-        <div className="relative z-10 px-12 md:px-24 max-w-3xl">
+        <div className="relative z-10 px-6 md:px-24 max-w-3xl mt-24 md:mt-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -181,7 +181,7 @@ export default function App() {
         <motion.div 
           animate={{ y: [0, 10, 0] }} 
           transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 left-12 md:left-24 text-white/40 flex flex-col items-start gap-2"
+          className="absolute bottom-10 left-6 md:left-24 text-white/40 flex flex-col items-start gap-2"
         >
           <span className="text-[10px] uppercase tracking-widest font-bold">Explore</span>
           <div className="w-px h-12 bg-white/20 relative">
@@ -219,7 +219,7 @@ export default function App() {
               <p className="text-gray-600 text-lg leading-relaxed font-light">
                 {ABOUT.story}
               </p>
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-100">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 border-t border-gray-100 text-center sm:text-left">
                 <div>
                   <div className="text-3xl font-serif font-bold text-polish-clay">{ABOUT.stats[0].value}</div>
                   <div className="text-[10px] uppercase font-bold tracking-widest text-gray-400 mt-2">{ABOUT.stats[0].label}</div>
@@ -255,7 +255,7 @@ export default function App() {
             {/* Dog Card */}
             <motion.div 
               whileHover={{ y: -8 }}
-              className="card relative overflow-hidden p-12 aspect-[4/3] flex flex-col justify-end group cursor-pointer border-gray-100/50"
+              className="card relative overflow-hidden p-8 md:p-12 min-h-[450px] md:min-h-0 md:aspect-[4/3] flex flex-col justify-end group cursor-pointer border-gray-100/50"
             >
               <img 
                 src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=2070&auto=format&fit=crop" 
@@ -279,7 +279,7 @@ export default function App() {
             {/* Cat Card */}
             <motion.div 
               whileHover={{ y: -8 }}
-              className="card relative overflow-hidden p-12 aspect-[4/3] flex flex-col justify-end group cursor-pointer border-gray-100/50"
+              className="card relative overflow-hidden p-8 md:p-12 min-h-[450px] md:min-h-0 md:aspect-[4/3] flex flex-col justify-end group cursor-pointer border-gray-100/50"
             >
               <img 
                 src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop" 
@@ -381,7 +381,7 @@ export default function App() {
       <section id="store" className="py-24 px-6 md:px-12 bg-polish-cream">
         <div className="max-w-7xl mx-auto">
           <div className="card p-1 pb-1 border-dashed border-2 border-polish-sage/20 bg-white">
-            <div className="p-16 flex flex-col md:flex-row items-center gap-16">
+            <div className="p-6 md:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-16">
               <div className="flex-1 space-y-8 text-center md:text-left">
                 <h3 className="text-polish-clay font-display font-bold uppercase tracking-[0.2em] text-[10px]">MyVetStore Partner</h3>
                 <h2 className="font-serif text-5xl md:text-7xl">Curated for their comfort.</h2>
