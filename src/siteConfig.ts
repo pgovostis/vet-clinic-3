@@ -30,7 +30,7 @@ export const TEAM = [
     name: "Dr. Ciara O'Meara",
     role: "Founder & Lead Veterinarian",
     bio: "Over 20 years of veterinary experience. Focuses on soft tissue surgery, dentistry, and internal medicine.",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop"
+    image: "https://styles.prosites.com/litesite/6550/images/cta1.jpg"
   },
   {
     name: "Dr. Amina Johnson",
