@@ -115,6 +115,25 @@ export default function App() {
         )}
       </AnimatePresence>
 
+      {/* Mobile Floating Action Buttons */}
+      <AnimatePresence>
+        {isScrolled && (
+          <motion.div 
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 100 }}
+            className="md:hidden fixed bottom-6 left-6 right-6 z-40 flex items-center gap-2 p-2 bg-white/80 backdrop-blur-xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-full"
+          >
+            <button className="flex-1 py-3.5 bg-polish-clay text-white rounded-full text-[10px] font-bold uppercase tracking-widest cursor-pointer shadow-md text-center transition-transform hover:scale-[1.02]">
+              Book Now
+            </button>
+            <button className="flex-1 py-3.5 bg-polish-emergency text-white rounded-full text-[10px] font-bold uppercase tracking-widest cursor-pointer shadow-md text-center transition-transform hover:scale-[1.02]">
+              After Hours
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Hero Section */}
       {/* Main content landmark */}
       <main id="main-content">
