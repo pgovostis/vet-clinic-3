@@ -137,7 +137,7 @@ export default function App() {
       {/* Hero Section */}
       {/* Main content landmark */}
       <main id="main-content">
-      <section className="relative h-screen w-full overflow-hidden flex items-center" aria-label="Hero">
+      <section className="relative min-h-[100svh] w-full overflow-hidden flex items-center py-32 md:py-40" aria-label="Hero">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=2070&auto=format&fit=crop" 
@@ -150,7 +150,7 @@ export default function App() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_40%,rgba(197,160,89,0.3)_0%,transparent_50%)]"></div>
         </div>
 
-        <div className="relative z-10 px-6 md:px-24 max-w-3xl mt-24 md:mt-0">
+        <div className="relative z-10 px-6 md:px-24 max-w-3xl w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
